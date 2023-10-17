@@ -1,0 +1,48 @@
+@baseUrl = http://localhost:3000/api/v1/bootcamps
+
+### Get all Bootcamps
+GET {{baseUrl}}
+ 
+### Get Bootcamp
+GET {{baseUrl}}/652ee7b2f474ed6521b46f84
+
+### Create Bootcamps
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+     "name": "Test Bootcamp",
+		"description": "Is coding your passion? Codemasters will give you the skills and the tools to become the best developer possible. We specialize in front end and full stack web development",
+		"website": "https://devcentral.com",
+		"phone": "(444) 444-4444",
+		"email": "enroll@devcentral.com",
+		"address": "45 Upper College Rd Kingston RI 02881",
+		"careers": [
+			"Mobile Development",
+			"Web Development",
+			"Data Science",
+			"Business"
+		],
+		"housing": false,
+		"jobAssistance": true,
+		"jobGuarantee": true,
+		"acceptGi": true
+}
+
+### Update Bootcamp
+PUT {{baseUrl}}/652ee7b2f474ed6521b46f84
+Content-Type: application/json
+
+{
+    "housing": true,
+    "email": "mcduell24@gmail.com"
+}
+
+### Delete Bootcamp
+DELETE  {{baseUrl}}/652ee7b2f474ed6521b46f84
+Content-Type: application/json
+
+{
+    "housing": true,
+    "email": "mcduell24@gmail.com"
+}
